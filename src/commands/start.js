@@ -1,5 +1,5 @@
-const start = (ctx) => {
-  ctx.reply('Bot started')
+const start = async (ctx) => {
+  await ctx.reply('Bot started')
 }
 
 export { start }

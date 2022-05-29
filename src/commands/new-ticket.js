@@ -1,8 +1,8 @@
 import { Ticket } from '../entities/Ticket.js'
 
-const addNewTicket = (ctx) => {
+const addNewTicket = async (ctx) => {
   const ticket = new Ticket(ctx)
-  ctx.reply(`Added ${ticket.task} to tickets list.`)
+  await ctx.reply(`Added ${ticket.task} to tickets list. Author is ${ticket.author}. Executor ${ticket.executor}`)
 }
 
 export { addNewTicket }

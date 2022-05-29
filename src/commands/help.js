@@ -1,5 +1,5 @@
-const help = (ctx) => {
-  ctx.reply('How can I help you?')
+const help = async (ctx) => {
+  await ctx.reply('How can I help you?')
 }
 
 export { help }
