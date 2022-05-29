@@ -7,10 +7,6 @@ class Ticket {
     return this._task
   }
 
-  get author() {
-    return this._author
-  }
-
   _parseMessage(ctx) {
     const ticket = ctx.message.text.split(' ')
     ticket.splice(0, 1)
