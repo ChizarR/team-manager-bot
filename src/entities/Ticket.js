@@ -17,10 +17,11 @@ class Ticket {
   }
 
   _parseMessage(ctx) {
-    const ticket = ctx.message.text.split(' ')
-    ticket.splice(0, 1)
-    const executor = this._findExecutor(ticket, ctx)
-    return [ticket.join(' '), executor]
+    const rawTicket = ctx.message.text.split(' ')
+    rawTicket.splice(0, 1)
+    const executor = this._findExecutor(rawTicket, ctx)
+    const ticket = rawTicket.join(' ')
+    return [ticket, executor]
   }
 
   _findExecutor(ticket, ctx) {
